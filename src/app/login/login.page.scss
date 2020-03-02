@@ -1,0 +1,29 @@
+$white-color: #fff;
+$height100: 100%;
+
+
+.text-center{
+	text-align: center;
+	width: 100%
+}
+.submitBtn{
+	margin-top: 12px;
+}
+
+.absolute-Center {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.form-head{
+
+	h4{
+	font-size: 1.5em;
+    font-weight: 600;
+    font-style: italic;
+    font-family: cursive;
+}
+}

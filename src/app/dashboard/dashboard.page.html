@@ -1,0 +1,43 @@
+    <ion-header  >
+      <ion-toolbar color="primary">
+        <ion-title>Restaurants</ion-title>
+      </ion-toolbar>
+      <ion-toolbar color="primary">
+        <ion-searchbar  (ionInput)="filterRestoItems($event)"></ion-searchbar>
+      </ion-toolbar>
+    </ion-header>
+
+<ion-content padding fullscreen>
+
+<ion-list>
+
+
+
+  <ion-item>
+   
+    <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Sort By" slot="end" (ionChange)="_sortRestoItems($event)" >
+      <ion-select-option value="nm">Name</ion-select-option>
+      <ion-select-option value="dt">Distance</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+</ion-list>
+
+<ion-card mode="ios" *ngFor=" let resto of restaurantsData">
+  <ion-card-header>
+    <ion-card-subtitle>{{resto.neighborhood}}</ion-card-subtitle>
+    <ion-card-title>{{resto.name}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{resto.address}}
+	<ion-badge slot="end" color="primary">Distance: {{resto.distance}} miles</ion-badge>
+  </ion-card-content>
+  
+
+</ion-card>
+
+
+
+</ion-content>
